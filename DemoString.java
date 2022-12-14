@@ -40,7 +40,11 @@ public class DemoString {
         // Imprimeix la posició del nom on apareix la primera 'a'
         System.out.println("La primera 'a' apareix a la posició: " + nom.indexOf("a"));
 
-        System.out.println("El nom en minúscules és: "+nom.toLowerCase());
+        // Usem toLowerCase per mostrar el nom tot el minúscules però sense modificar el valor original.
+        System.out.println("El nom en minúscules és: " + nom.toLowerCase());
+
+        // Usem el mètode compareTo
+        System.out.println("Comparem amb compareTo " + nom.compareTo("Maria"));
 
     }
 }
