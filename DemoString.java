@@ -1,3 +1,4 @@
+package javaBasicExamples;
 import java.util.Scanner;
 
 public class DemoString {
