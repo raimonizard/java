@@ -13,6 +13,7 @@ public class DemoString {
         // Compara Strings sensible a majúscules
         if (nom.equals("Ramon Arnau")){
             System.out.println("Bon dia");
+            
         }
 
         // Compara Strings insensible a majúscules
