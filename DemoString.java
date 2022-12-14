@@ -5,7 +5,7 @@ public class DemoString {
     // Crea el mètode executable per posar el 'play'
     public static void main(String[] args) {
         Scanner llegir = new Scanner(System.in);
-        String nom;
+        String nom, nom2;
 
         System.out.print("Escriu el teu nom: ");
         nom = llegir.nextLine();
