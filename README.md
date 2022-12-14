@@ -1,2 +1,2 @@
-# java-basic-examples
-Basic examples of java programming
+# javaBasicExamples
+Basic java programming examples for teaching
