@@ -1,25 +1,28 @@
 package models;
 public  class Gos {
     // Atributs que descriuen un Gos
-    private int xip;
+    // L'atribut XIP el farem final que vol dir que serà una constant i no se li podrà canviar el valor inicial
+    private final int XIP;
     private String nom;
     private String raca;
     private int edat;
     private float pes;
     private boolean perillos;
-    // private Persona propietari;
+    private Persona propietari;
     private int nivellGana = 10;
     private int nivellSet = 5;
     private int nivellEnergia = 7;
     private boolean teSon = true;
+    private static int numGossosCreats = 0;
 
     /**
      * Constructor amb els següents paràmetres:
      * @param nom
      */
-    public Gos(int xip, String nom){
-        this.xip = xip;
+    public Gos(String nom){
+        this.XIP = (int)(Math.random()*99+1);
         this.nom = nom;
+        Gos.numGossosCreats++;
     }
 
     /**
@@ -29,10 +32,11 @@ public  class Gos {
      * @param edat
      */
     public Gos(int xip, String nom, String raca, int edat){
-        this.xip = xip;
+        this.XIP = xip;
         this.nom = nom;
         this.raca = raca;
         this.edat = edat;
+        Gos.numGossosCreats++;
     }
 
     public void dormir(int hores){
@@ -40,7 +44,7 @@ public  class Gos {
         this.teSon = false;
     }
 
-    private void bordar(){
+    public void bordar(){
         System.out.println("Bup bup!");
     }
 
@@ -161,8 +165,12 @@ public  class Gos {
         this.propietari = propietari;
     }
 
-    public int getXip() {
-        return xip;
+    public int getXIP() {
+        return XIP;
+    }
+
+    public static int getNumGossosCreats() {
+        return numGossosCreats;
     }
 
     /**
@@ -207,7 +215,7 @@ public  class Gos {
         Gos aux = (Gos)obj;
 
         // Definim què vol dir que dos Gossos siguin iguals
-        if (aux.getXip() == this.xip){
+        if (aux.getXIP() == this.XIP){
             return true;
         }else{
             return false;
