@@ -6,3 +6,5 @@ Basic java programming examples for teaching CFGS Computer Science including:
 4. Recursive programming
 5. java.util.ArrayList Class
 6. Object Oriented Programming
+7. Exceptions
+8. Files Treatment
